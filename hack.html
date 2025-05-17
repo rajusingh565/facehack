@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Facebook Hacked</title>
+  <style>
+    body {
+      background: black;
+      color: lime;
+      font-family: monospace;
+      padding: 20px;
+    }
+    .terminal {
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <h2>Connecting to Facebook servers...</h2>
+  <div class="terminal" id="terminal"></div>
+
+  <script>
+    const lines = [
+      "Accessing Facebook Database...",
+      "Bypassing firewall...",
+      "Decrypting user data...",
+      "Downloading credentials...",
+      "Injecting payload...",
+      "Admin access granted!",
+      "Facebook account hacked successfully!"
+    ];
+
+    let index = 0;
+    const terminal = document.getElementById("terminal");
+
+    function typeLine() {
+      if (index < lines.length) {
+        terminal.innerHTML += lines[index] + "\n";
+        index++;
+        setTimeout(typeLine, 1000);
+      }
+    }
+
+    typeLine();
+  </script>
+</body>
+</html>
